@@ -14,13 +14,13 @@ install: build
 		install build/$(GOOS)_$(GOARCH)/$(PLUGIN_NAME)_$(TAG) $(TF_PLUGIN_PATH)
 
 lint:
-	golangci-lint run
+	@golangci-lint run
 
 test:
 	go test -v -cover ./...
 
 clean:
-	rm -rf build/
+	@rm -rf build/
 
 build-linux: mod
 	@docker build -t build .
@@ -33,4 +33,9 @@ mod:
 	@go mod tidy
 	@go mod vendor
 
-.PHONY: build install lint test clean build-linux mod
+docs:
+	@go get github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs
+	@go generate -mod=readonly
+	@go mod tidy
+
+.PHONY: build install lint test clean build-linux mod docs
