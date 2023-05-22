@@ -1,4 +1,4 @@
-module github.com/nordcloud/terraform-provider-pingdom
+module github.com/rk295/terraform-provider-pingdom
 
 go 1.15
 
