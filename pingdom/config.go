@@ -2,12 +2,13 @@ package pingdom
 
 import (
 	"errors"
-	"github.com/nordcloud/go-pingdom/solarwinds"
 	"log"
 	"os"
 
-	"github.com/nordcloud/go-pingdom/pingdom"
-	"github.com/nordcloud/go-pingdom/pingdomext"
+	"github.com/rk295/go-pingdom/solarwinds"
+
+	"github.com/rk295/go-pingdom/pingdom"
+	"github.com/rk295/go-pingdom/pingdomext"
 )
 
 // Config respresents the client configuration
@@ -70,7 +71,6 @@ func (c *Config) Client() (*Clients, error) {
 }
 
 // Client returns a new client for accessing pingdom.
-//
 func (c *Config) pingdomClient() (*pingdom.Client, error) {
 	if v := os.Getenv("PINGDOM_API_TOKEN"); v != "" {
 		c.APIToken = v

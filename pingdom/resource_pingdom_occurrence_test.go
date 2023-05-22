@@ -3,13 +3,14 @@ package pingdom
 import (
 	"bytes"
 	"fmt"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/nordcloud/go-pingdom/solarwinds"
 	"strconv"
 	"testing"
 	"text/template"
 	"time"
+
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/rk295/go-pingdom/solarwinds"
 )
 
 func TestAccOccurrence_basic(t *testing.T) {

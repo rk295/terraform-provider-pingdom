@@ -17,7 +17,7 @@ This supports Pingdom API v3.1: [API reference docs](https://docs.pingdom.com/ap
 terraform {
   required_providers {
     pingdom = {
-      source = "nordcloud/pingdom"
+      source = "rk295/pingdom"
       version = "1.1.4"
     }
   }
@@ -198,7 +198,7 @@ manually accepts the invitation sent to his email as specified at the time the i
 ```hcl
 
 resource "pingdom_user" "user" {
-  email = "foo@nordcloud.com"
+  email = "foo@example.com"
   role = "MEMBER"
   products {
     name = "APPOPTICS"

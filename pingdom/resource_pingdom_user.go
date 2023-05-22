@@ -3,12 +3,13 @@ package pingdom
 import (
 	"context"
 	"errors"
+	"log"
+	"time"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/nordcloud/go-pingdom/solarwinds"
-	"log"
-	"time"
+	"github.com/rk295/go-pingdom/solarwinds"
 )
 
 const (
