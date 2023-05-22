@@ -1,14 +1,13 @@
 package main
 
 import (
-	// // document generation
-	// _ "github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 
 	"github.com/rk295/terraform-provider-pingdom/pingdom"
 )
 
-// Generate the Terraform provider documentation using `tfplugindocs`:
+// Run the docs generation tool, check its repository for more information on how it works and how docs
+// can be customized.
 //go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs
 
 func main() {
