@@ -3,12 +3,13 @@ package pingdom
 import (
 	"bytes"
 	"fmt"
+	"html/template"
+	"testing"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/nordcloud/go-pingdom/solarwinds"
-	"html/template"
-	"testing"
+	"github.com/rk295/go-pingdom/solarwinds"
 )
 
 func TestAccUser_basic(t *testing.T) {

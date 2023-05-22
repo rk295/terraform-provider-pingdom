@@ -2,11 +2,12 @@ package pingdom
 
 import (
 	"context"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/nordcloud/go-pingdom/pingdom"
 	"strconv"
 	"strings"
+
+	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/rk295/go-pingdom/pingdom"
 )
 
 func resourcePingdomMaintenance() *schema.Resource {
